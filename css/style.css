@@ -4,3 +4,121 @@
     box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+    background: #eee;
+}
+section {
+    text-align: center;
+}
+section header,
+section footer {
+    margin: 50px auto;
+}
+.two-cells {
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0;
+    align-items: center;
+    /* justify-content: center; */
+}
+.two-cells figure {
+    margin: 0 20px;
+}
+.two-cells article {
+    width: 60%;
+    grid-area: "art";
+}
+.two-cells article p {
+    line-height: 1.6;
+}
+img {
+    width: 100%;
+}
+section#contact {
+    background: rgb(158, 194, 158);
+    padding: 50px 0;
+}
+section#contact form {
+    width: 70%;
+    margin: 30px auto;
+    text-align: right;
+}
+section#contact form input,
+section#contact form textarea {
+    display: block;
+    height: 40px;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 10px auto;
+}
+section#contact form input::placeholder,
+section#contact form textarea::placeholder {
+    font-size: 16px;
+    color: black;
+}
+section#contact form input:nth-of-type(1),
+section#contact form input:nth-of-type(2) {
+    width: 48%;
+    display: inline-block;
+}
+section#contact form input:nth-of-type(2) {
+    margin-left: 3%;
+}
+section#contact form textarea {
+    height: 100px;
+    resize: none;
+}
+section#contact form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid black;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+section#contact form button:hover {
+    background: black;
+    color: white;
+}
+footer {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+}
+footer p {
+    margin: 10px auto;
+}
+footer .social {
+    margin: 30px auto;
+}
+footer .social svg {
+    font-size: 35px;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+@media screen and (max-width: 700px) {
+    .two-cells {
+        flex-direction: column;
+    }
+    .two-cells article {
+        order: 2;
+        width: 90%;
+    }
+    .two-cells figure {
+        margin: 30px 0;
+    }
+    section#contact form input:nth-of-type(1),
+    section#contact form input:nth-of-type(2) {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+    }
+}
